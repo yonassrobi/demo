@@ -72,7 +72,7 @@ pipeline {
         steps {
           dir ('./charts/demo') {
             container('maven') {
-              sh 'jx step changelog --version v\$(cat ../../VERSION)'
+              //sh 'jx step changelog --version v\$(cat ../../VERSION)'
 
               // release the helm chart
               sh 'make release'
